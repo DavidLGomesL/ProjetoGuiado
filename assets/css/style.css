@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .header {
@@ -15,7 +16,7 @@ body {
 .menu {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .menu a {
@@ -23,7 +24,6 @@ body {
   font-weight: bold;
   color: blue;
   margin-right: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   border: 1px solid black;
   padding: 5px;
 }
