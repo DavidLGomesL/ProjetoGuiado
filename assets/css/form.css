@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.form .label-great {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+
+.form .line-form {
+  margin-bottom: 15px;
+}
+/*
+Obs: Não utilizado @media, pois a quebra do texto só acontece a partir de uma tela de 250px, e a menor dimansão responsiva para aparelhos mobiles é 320px.
+
+@media screen and (max-width: 250px) {
+  .form input[type='text'] {
+    width: 100%;
+  }
+  .form .label-great {
+    width: 100%;
+    text-align: center;
+  }
+  .xp-line {
+    flex-direction: column;
+  }
+  .xp-line div {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .xp-button {
+    display: inline-block;
+  }
+}
+*/

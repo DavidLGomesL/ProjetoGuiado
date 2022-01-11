@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
     <title>Projeto Guiado</title>
   </head>
   <body>
@@ -15,7 +16,31 @@
       <a href="./index.html">Listagem</a>
       <a href="./form.html">Cadastrar </a>
     </div>
-    <section></section>
+    <section>
+      <form class="form">
+        <div class="line-form">
+          <label class="label-great" for="name">Nome:</label>
+          <input name="name" id="name" required type="text" />
+        </div>
+
+        <div class="line-form">
+          <label class="label-great" for="phone">Telefone:</label>
+          <input name="phone" id="phone" required type="text" />
+        </div>
+
+        <div class="line-form" style="display: flex">
+          <label class="label-great xp-line">Experiência prévia:</label>
+          <div style="display: flex; width: 40%">
+            <input type="radio" name="xp" id="xp-yes" />
+            <label for="xp-yes">Sim</label>
+            <br />
+            <input type="radio" name="xp" id="xp-no" />
+            <label for="xp-no">Não</label>
+          </div>
+        </div>
+
+        <input type="submit" value="Salvar" />
+      </form>
+    </section>
   </body>
-  Meu formulário
 </html>
