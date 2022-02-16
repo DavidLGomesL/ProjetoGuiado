@@ -30,10 +30,19 @@ let people = [
 
 for (person in people) {
   //desenvolvimento da tabela e inserção da mesma no HTML.
-  document.querySelector('table.list tbody').innerHTML += `<tr>
+  console.log(person)
+  document.querySelector(
+    'table.list tbody'
+  ).innerHTML += `<tr style="background-color: ${
+    person % 2 == 0 ? '#fff' : '#eee'
+  }">
   <td>${people[person].name}</td>
   <td>${people[person].tel}</td>
-  <td>${people[person].xp ? 'Sim' : 'Não'}</td>
+  <td>${
+    people[person].xp
+      ? '<strong style="color:green"> Sim </strong>'
+      : '<strong style="color:red"> Não </strong>'
+  }</td>
   <td>
     <button>Alterar</button>
   </td>`
