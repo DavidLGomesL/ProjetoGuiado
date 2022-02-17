@@ -1,33 +1,11 @@
 //desenvolvimento JS para projeto guiado 1, que teve inicio com HTML e CSS.
-let people = [
-  //váriável com array para inclusão dos dados da tabela.
-  //'let people' foi retirado da 'function desenhaTabela()' para ser "visualizado" de forma global na página.
-  {
-    name: 'David Luan Gomes Lima',
-    tel: '+55 (85) 91234-5678',
-    xp: false
-  },
-  {
-    name: 'Dávina Saldanha de Vasconcelos Gomes',
-    tel: '+55 (85) 99999-9999',
-    xp: true
-  },
-  {
-    name: 'Rosângela Barbosa Gomes',
-    tel: '+55 (85) 98888-8888',
-    xp: true
-  },
-  {
-    name: 'Thalita de Almeida Klippel',
-    tel: '+55 (85) 96666-6666',
-    xp: true
-  },
-  {
-    name: 'Andressa Carneiro de Meneses',
-    tel: '+55 (85) 93333-3333',
-    xp: false
-  }
-];
+let peopleRaw = localStorage.getItem('people') //'localStorage' incluido para salvar informações no 'localStorage' da página. Dados anteriores das pessoas, foram incluidos no 'localStorage' da página.
+if (peopleRaw != null) { //inclusão da função 'if e else'.
+  var people = JSON.parse(peopleRaw)
+} else {
+  var people = [];
+}
+ 
 
 function desenhaTabela() { //'function' criada para inclusão dos dados acima na tabela.
 
