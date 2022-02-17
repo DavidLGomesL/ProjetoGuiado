@@ -29,10 +29,16 @@ function desenhaTabela() { //'function' criada para inclusão dos dados acima na
         ? '<strong style="color:green"> Sim </strong>' //Nessa linha está sendo aplicado o "negrito" a palavra "sim" através da "tag strong" e está sendo aplicado a cor "verde",através do "style", a palavra "sim", tornando mais interativa a percepção na tabela, se as pessoas que constam na mesma, possuem ou não experiência.
         : '<strong style="color:red"> Não </strong>' //Assim como na palavra "sim", está sendo aplicada a tag strong para a palavra "não" deixando-a com "negrito" e está sendo aplicada a cor vermelha através do style, tornando mais interativa a percepção na tabela.
     }</td>
-    <td>element
-      <button onclick="people.splice(${person}, 1); desenhaTabela();">Excluir</button>
+    <td>
+      <button onclick="deleteUser(${person})">Excluir</button> 
     </td>` //'people.splice será usado para retirar um 'person' da tabela.
-  }
+  } 
+}
+//criada função deleteUser, somente para organizar melhor a linha do "button"
+function deleteUser(p) {
+  people.splice(p, 1); 
+  desenhaTabela(); 
+  localStorage.setItem('people', JSON.stringify(people));
 }
 
 desenhaTabela() //Vai chamar os elementos da tabela.
