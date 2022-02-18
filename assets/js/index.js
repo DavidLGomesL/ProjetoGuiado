@@ -31,7 +31,9 @@ function desenhaTabela() { //'function' criada para inclusão dos dados acima na
     }</td>
     <td>
       <button onclick="deleteUser(${person})">Excluir</button> 
+      <a href="./form.html?person=${person}">Editar</a> 
     </td>` //'people.splice será usado para retirar um 'person' da tabela.
+          //botão "editar" criado para que seja possivel a edição dos dados, retornando a página de cadastro.
   } 
 }
 //criada função deleteUser, somente para organizar melhor a linha do "button"
