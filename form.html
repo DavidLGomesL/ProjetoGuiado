@@ -13,11 +13,12 @@
       <img class="logo" src="./assets/img/logoNewtab.png" />
     </header>
     <div class="menu">
-      <a href="./index.html">Listagem</a>
+      <a id="goHome" href="./index.html">Listagem</a>
+      <!--"id=goHome" adicionada para execução do "document.getElementById('goHome').click()", para que assim que clicar em salvar na página de cadastro, mudar diretamente para a página da lista-->
       <a href="./form.html">Cadastrar </a>
     </div>
     <section>
-      <form class="form">
+      <form class="form" onsubmit="testForm(event);">
         <div class="line-form">
           <label class="label-great" for="name">Nome:</label>
           <input name="name" id="name" required type="text" />
@@ -31,10 +32,10 @@
         <div class="line-form" style="display: flex">
           <label class="label-great xp-line">Experiência prévia:</label>
           <div style="display: flex; width: 40%">
-            <input type="radio" name="xp" id="xp-yes" />
+            <input type="radio" name="xp" id="xp-yes" value="true" />
             <label for="xp-yes">Sim</label>
             <br />
-            <input type="radio" name="xp" id="xp-no" />
+            <input type="radio" name="xp" id="xp-no" value="false" />
             <label for="xp-no">Não</label>
           </div>
         </div>
@@ -42,5 +43,6 @@
         <input type="submit" value="Salvar" />
       </form>
     </section>
+    <script src="./assets/js/form.js"></script>
   </body>
 </html>
