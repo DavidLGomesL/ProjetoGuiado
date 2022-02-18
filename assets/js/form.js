@@ -2,6 +2,18 @@
 function testForm(e) { //"function" criada para a inclusão de novas pessoas.
   e.preventDefault();
 
+  for (i in e.target.elements['phone'].value) { //"for" criado para a realização de teste para o campo "phone"(telefone).
+    if ('0123456789'.indexOf(e.target.elements['phone'].value[i]) == -1) {
+      alert('Apenas número são permitidos no campo telefone!')
+      return false
+    }
+  }
+
+  if (e.target.elements['phone'].value.length < 11) { //segundo teste criado para o campo telefone.
+    alert('Número invalido!')
+      return false
+  }
+
   let peopleRaw = localStorage.getItem('people')
   if (peopleRaw != null) { 
     var people = JSON.parse(peopleRaw)
