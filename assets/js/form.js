@@ -2,14 +2,20 @@
 function testForm(e) { //"function" criada para a inclusão de novas pessoas.
   e.preventDefault();
 
-  for (i in e.target.elements['phone'].value) { //"for" criado para a realização de teste para o campo "phone"(telefone).
+  /*for (i in e.target.elements['phone'].value) { //"for" criado para a realização de teste para o campo "phone"(telefone).
     if ('0123456789'.indexOf(e.target.elements['phone'].value[i]) == -1) {
       alert('Apenas número são permitidos no campo telefone!')
       return false
     }
+  }*/
+
+  let phonePattern = /[^0-9-() ]+/g //teste criado em formato de expressão regular em substituição ao primeiro teste do campo telefone.
+  if (phonePattern.test(e.target.elements['phone'].value)) {
+    alert('Apenas número são permitidos no campo telefone!')
+    return false
   }
 
-  if (e.target.elements['phone'].value.length < 11) { //segundo teste criado para o campo telefone.
+  if (e.target.elements['phone'].value.replace(/[-() ]/g, '').length < 11) { //segundo teste criado para o campo telefone.
     alert('Número invalido!')
       return false
   }
