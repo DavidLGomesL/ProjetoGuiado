@@ -26,7 +26,14 @@
 
         <div class="line-form">
           <label class="label-great" for="phone">Telefone:</label>
-          <input name="phone" id="phone" required type="text" />
+          <input
+            name="phone"
+            id="phone"
+            onkeypress="testCampPhone(event)"
+            required
+            type="text"
+          />
+          <!--Foi incluido no input acima o "onkeypress="testCampPhone(event)", como um dos parametros responsivos incluidos no campo telefone.-->
         </div>
 
         <div class="line-form" style="display: flex">

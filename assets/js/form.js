@@ -67,3 +67,12 @@ if (id !== null) {
     document.getElementById('xp-no').checked = true
   }
 }
+
+function testCampPhone(e) { //"função usada para estabelecer parametros sobre o que pode ou não ser digitado no campo telefone. No caso só será aceito números. Foi usado expressão regular para definir o parâmetro."
+  e.preventDefault()
+  console.log(e)
+  
+  if ((/[0-9 -()]/g).test(e.key)) {
+    e.target.value += e.key
+  }
+}
