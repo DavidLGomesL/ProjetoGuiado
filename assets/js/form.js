@@ -71,8 +71,20 @@ if (id !== null) {
 function testCampPhone(e) { //"função usada para estabelecer parametros sobre o que pode ou não ser digitado no campo telefone. No caso só será aceito números. Foi usado expressão regular para definir o parâmetro."
   e.preventDefault()
   console.log(e)
-  
-  if ((/[0-9 -()]/g).test(e.key)) {
+  //abaixo foram incluidos parametros para inclusão dos parenteses "()", espaço " " e traço "-".
+  if (e.target.value.length == 0) {
+    e.target.value += '('
+  }
+
+  if (e.target.value.length == 3) {
+    e.target.value += ') '
+  }
+
+  if (e.target.value.length == 10) {
+    e.target.value += '-'
+  }
+
+  if ((/[0-9]/g).test(e.key) && e.target.value.length < 15) { //Parametro para limitação de até 15 caracteres numéricos na digitação do número de telefone.
     e.target.value += e.key
   }
 }

@@ -30,10 +30,12 @@
             name="phone"
             id="phone"
             onkeypress="testCampPhone(event)"
+            onfocus="this.value = ''"
             required
             type="text"
           />
           <!--Foi incluido no input acima o "onkeypress="testCampPhone(event)", como um dos parametros responsivos incluidos no campo telefone.-->
+          <!--Incluido onfocus="this.value = ''" para definição de parametro de valor igual a string vazia. -->
         </div>
 
         <div class="line-form" style="display: flex">
